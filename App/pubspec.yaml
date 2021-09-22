@@ -37,6 +37,7 @@ dev_dependencies:
   pedantic: ^1.4.0
   flutter_test:
     sdk: flutter
+  url_launcher: ^5.7.5
   
 
 # For information on the generic Dart part of this file, see the
@@ -53,6 +54,7 @@ flutter:
   assets:
     - assets/locations.json
     - assets/marker.png
+    - assets/tree.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
