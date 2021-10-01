@@ -47,6 +47,7 @@ class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Container(
           child: GoogleMap(
             onMapCreated: _onMapCreated,
