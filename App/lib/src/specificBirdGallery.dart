@@ -10,7 +10,7 @@ class SpecificBirdGallery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SlidingUpPanel(
-        minHeight: 190,
+        minHeight: 220,
         maxHeight: 1000,
         panel: Stack(
           children: <Widget>[

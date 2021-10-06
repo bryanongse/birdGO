@@ -58,13 +58,13 @@ class _MyAppState extends State<MyApp> {
           fit: StackFit.expand,
           children: [
             MapPage(),
-            buildFloatingSearchBar(),
             Positioned(
-              top: 100,
+              top: 60,
               child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    SizedBox(width: 5,),
                     ElevatedButton(
                         onPressed: () {
                           setState(() {
@@ -74,6 +74,7 @@ class _MyAppState extends State<MyApp> {
                           });
                         },
                         child: Text('show top three birds', style: TextStyle(fontSize: 12))),
+                    SizedBox(width: 10,),
                     ElevatedButton(
                         onPressed: () {
                           setState(() {
@@ -83,6 +84,7 @@ class _MyAppState extends State<MyApp> {
                           });
                         },
                         child: Text('show all birds', style: TextStyle(fontSize: 12))),
+                    SizedBox(width: 10,),
                     ElevatedButton(
                         onPressed: () {
                           setState(() {
@@ -92,16 +94,18 @@ class _MyAppState extends State<MyApp> {
                           });
                         },
                         child: Text('show specific bird', style: TextStyle(fontSize: 12))),
+                    SizedBox(width: 5,),
                   ],
                 ),
             ),
-              Visibility(
-                  visible: specificBirdGalleryWidgetIsVisible,
-                  child: SpecificBirdGallery()),
-              Visibility(visible: allBirdsWidgetIsVisible, child: AllBirds()),
-              Visibility(
-                  visible: topThreeBirdsWidgetIsVisible,
-                  child: TopThreeBirds()),
+            Visibility(
+                visible: specificBirdGalleryWidgetIsVisible,
+                child: SpecificBirdGallery()),
+            Visibility(visible: allBirdsWidgetIsVisible, child: AllBirds()),
+            Visibility(
+                visible: topThreeBirdsWidgetIsVisible,
+                child: TopThreeBirds()),
+            buildFloatingSearchBar(),
           ],
         ),
         drawer: Drawer(
